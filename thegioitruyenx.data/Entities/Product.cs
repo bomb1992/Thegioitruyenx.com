@@ -13,5 +13,7 @@ namespace thegioitruyenx.data.Entities
         public int ViewCout { set; get; }
         public string DateCreate { set; get; }
         public string SeoAlias { set; get; }
+
+        public List<ProductInCategory> ProductInCategories { set; get; }
     }
 }
