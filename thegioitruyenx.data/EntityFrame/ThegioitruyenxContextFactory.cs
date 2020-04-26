@@ -12,11 +12,13 @@ namespace thegioitruyenx.data.EntityFrame
     {
         public ThegioitruyenxDbContext CreateDbContext(string[] args)
         {
-            IConfigurationRoot configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings")
-                .Build();
-            var connectionString = configuration.GetConnectionString("ThegioitruyenxDatabase");
+            //IConfigurationRoot configuration = new ConfigurationBuilder()
+            //    //.SetBasePath(Directory.GetCurrentDirectory())
+            //    .AddJsonFile("DBAppSettings")
+            //    .Build();
+
+            //var connectionString = configuration.GetConnectionString("ThegioitruyenxDatabase");
+            var connectionString = "Server=DESKTOP-O7QAEMH;Database=thegioitruyenx;Trusted_Connection=True;";
 
             var optionsBuilder = new DbContextOptionsBuilder<ThegioitruyenxDbContext>();
             optionsBuilder.UseSqlServer(connectionString);

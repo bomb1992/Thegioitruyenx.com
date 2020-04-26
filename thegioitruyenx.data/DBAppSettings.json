@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "ThegioitruyenxDatabase": "Server=DESKTOP-O7QAEMH;Database=thegioitruyenx;Trusted_Connection=True;"
+  }
+}
