@@ -15,7 +15,7 @@ namespace thegioitruyenx.data.EntityFrame
             //IConfigurationRoot configuration = new ConfigurationBuilder()
             //    //.SetBasePath(Directory.GetCurrentDirectory())
             //    .AddJsonFile("DBAppSettings")
-            //    .Build();
+            //    .Build(); 
 
             //var connectionString = configuration.GetConnectionString("ThegioitruyenxDatabase");
             var connectionString = "Server=DESKTOP-O7QAEMH;Database=thegioitruyenx;Trusted_Connection=True;";
