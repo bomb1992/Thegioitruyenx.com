@@ -6,7 +6,7 @@ namespace thegioitruyenx.data.Entities
 {
     public class ThegioitruyenxAppConfig
     {
-        public int key { set; get; }
-        public string value { set; get; }
+        public string Key { set; get; }
+        public string Value { set; get; }
     }
 }
