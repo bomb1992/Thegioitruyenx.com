@@ -16,6 +16,7 @@ namespace thegioitruyenx.data.EntityFrame
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Configure using Fluent API
             modelBuilder.ApplyConfiguration(new ThegioitruyenxAppConfigConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
@@ -25,5 +26,7 @@ namespace thegioitruyenx.data.EntityFrame
         }
         public DbSet<Product> Products { set; get; }
         public DbSet<Category> Categories { set; get; }
+        public DbSet<ProductInCategory> ProductInCategorys { set; get; }
+        public DbSet<ThegioitruyenxAppConfig> ThegioitruyenxAppConfigs { set; get; }
     }
 }

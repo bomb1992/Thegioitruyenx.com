@@ -12,8 +12,8 @@ namespace thegioitruyenx.data.Configurations
         public void Configure(EntityTypeBuilder<ThegioitruyenxAppConfig> builder)
         {
             builder.ToTable("ThegioitruyenxAppConfigs");
-            builder.HasKey(x => x.key);
-            builder.Property(x => x.value).IsRequired(true);
+            builder.HasKey(x => x.Key);
+            builder.Property(x => x.Value).IsRequired(true);
         }
     }
 }
