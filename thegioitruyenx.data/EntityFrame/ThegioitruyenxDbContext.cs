@@ -25,6 +25,8 @@ namespace thegioitruyenx.data.EntityFrame
 
             //Data seeding
             modelBuilder.thegioitruyenSeed();
+
+            //IRIS
         }
         public DbSet<Product> Products { set; get; }
         public DbSet<Category> Categories { set; get; }
