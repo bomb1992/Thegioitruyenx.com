@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using thegioitruyenx.data.Configurations;
 using thegioitruyenx.data.Entities;
+using thegioitruyenx.data.Extensions;
 
 namespace thegioitruyenx.data.EntityFrame
 {
@@ -22,7 +23,10 @@ namespace thegioitruyenx.data.EntityFrame
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new ProductInCategoryConfiguration());
 
-            //base.OnModelCreating(modelBuilder);
+            //Data seeding
+            modelBuilder.thegioitruyenSeed();
+
+            //IRIS
         }
         public DbSet<Product> Products { set; get; }
         public DbSet<Category> Categories { set; get; }

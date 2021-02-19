@@ -29,6 +29,9 @@ namespace thegioitruyenx.data.Migrations
                     b.Property<bool>("IsShowOnHome")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("ParentId")
                         .HasColumnType("int");
 
@@ -43,6 +46,32 @@ namespace thegioitruyenx.data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            IsShowOnHome = true,
+                            Name = "Áo",
+                            SortOder = 1,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            IsShowOnHome = true,
+                            Name = "Quần",
+                            SortOder = 1,
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            IsShowOnHome = true,
+                            Name = "Giày",
+                            SortOder = 1,
+                            Status = 1
+                        });
                 });
 
             modelBuilder.Entity("thegioitruyenx.data.Entities.Product", b =>
@@ -55,6 +84,9 @@ namespace thegioitruyenx.data.Migrations
                     b.Property<string>("DateCreate")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<decimal>("OriginalPrice")
                         .HasColumnType("decimal(18,2)");
 
@@ -62,7 +94,6 @@ namespace thegioitruyenx.data.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("SeoAlias")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Stock")
@@ -78,6 +109,35 @@ namespace thegioitruyenx.data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1990,
+                            Name = "Áo thun",
+                            OriginalPrice = 7000m,
+                            Price = 10000m,
+                            Stock = 10,
+                            ViewCout = 0
+                        },
+                        new
+                        {
+                            Id = 1991,
+                            Name = "Quần thun",
+                            OriginalPrice = 15000m,
+                            Price = 20000m,
+                            Stock = 20,
+                            ViewCout = 0
+                        },
+                        new
+                        {
+                            Id = 1992,
+                            Name = "Quần Tây",
+                            OriginalPrice = 20000m,
+                            Price = 30000m,
+                            Stock = 20,
+                            ViewCout = 0
+                        });
                 });
 
             modelBuilder.Entity("thegioitruyenx.data.Entities.ProductInCategory", b =>
@@ -97,18 +157,33 @@ namespace thegioitruyenx.data.Migrations
 
             modelBuilder.Entity("thegioitruyenx.data.Entities.ThegioitruyenxAppConfig", b =>
                 {
-                    b.Property<int>("key")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Key")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("value")
+                    b.Property<string>("Value")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("key");
+                    b.HasKey("Key");
 
                     b.ToTable("ThegioitruyenxAppConfigs");
+
+                    b.HasData(
+                        new
+                        {
+                            Key = "HomeTitle",
+                            Value = "This is home page of thegioitruyenx.com"
+                        },
+                        new
+                        {
+                            Key = "HomeKeywork",
+                            Value = "This is keywork page of thegioitruyenx.com"
+                        },
+                        new
+                        {
+                            Key = "HomeDescription",
+                            Value = "This is description of thegioitruyenx.com"
+                        });
                 });
 
             modelBuilder.Entity("thegioitruyenx.data.Entities.ProductInCategory", b =>

@@ -9,7 +9,7 @@ namespace thegioitruyenx.data.Extensions
 {
     public static class ModelBuiderExtensions
     {
-        public static void Seed(this ModelBuilder modelBuilder)
+        public static void thegioitruyenSeed(this ModelBuilder modelBuilder)
         {
             // Seeding Data
             modelBuilder.Entity<ThegioitruyenxAppConfig>().HasData(new ThegioitruyenxAppConfig { Key = "HomeTitle", Value = "This is home page of thegioitruyenx.com" },
@@ -18,15 +18,15 @@ namespace thegioitruyenx.data.Extensions
                );
 
             modelBuilder.Entity<Category>().HasData(
-                new Category { Name = "Áo",IsShowOnHome = true, ParentId = null, SortOder = 1, Status = Status.Active },
-                new Category { Name = "Quần", IsShowOnHome = true, ParentId = null, SortOder = 1, Status = Status.Active },
-                new Category { Name = "Giày", IsShowOnHome = true, ParentId = null, SortOder = 1, Status = Status.Active }
+                new Category { Id = 1, Name = "Áo",IsShowOnHome = true, ParentId = null, SortOder = 1, Status = Status.Active },
+                new Category { Id = 2, Name = "Quần", IsShowOnHome = true, ParentId = null, SortOder = 1, Status = Status.Active },
+                new Category { Id = 3, Name = "Giày", IsShowOnHome = true, ParentId = null, SortOder = 1, Status = Status.Active }
                 );
 
             modelBuilder.Entity<Product>().HasData(
-                new Product { Name = "Áo thun", Price = 10000, OriginalPrice = 7000, Stock = 10, ViewCout = 0 },
-                new Product { Name = "Quần thun", Price = 20000, OriginalPrice = 15000, Stock = 20, ViewCout = 0 },
-                new Product { Name = "Quần Tây", Price = 30000, OriginalPrice = 20000, Stock = 20, ViewCout = 0 }
+                new Product { Id = 1990, Name = "Áo thun", Price = 10000, OriginalPrice = 7000, Stock = 10, ViewCout = 0 },
+                new Product { Id = 1991, Name = "Quần thun", Price = 20000, OriginalPrice = 15000, Stock = 20, ViewCout = 0 },
+                new Product { Id = 1992, Name = "Quần Tây", Price = 30000, OriginalPrice = 20000, Stock = 20, ViewCout = 0 }
                 );
         }
     }

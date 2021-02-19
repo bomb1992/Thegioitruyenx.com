@@ -1,5 +1,5 @@
 {
   "ConnectionStrings": {
-    "ThegioitruyenxDatabase": "Server=DESKTOP-O7QAEMH;Database=thegioitruyenx;Trusted_Connection=True;"
+    "ThegioitruyenxDatabase": "Server=DESKTOP-O7QAEMH\\SQLEXPRESS;Database=thegioitruyenx;Trusted_Connection=True;"
   }
 }
